@@ -2,7 +2,7 @@
 
 This project was bootstrapped .
 
-## Available Scripts
+## (React - Redux - Axios - Boostrap - Fake APİ)
 
 In the project directory, you can run:
 
