@@ -2,7 +2,7 @@
 
 This project was bootstrapped .
 
-## (React - Redux - Axios - Boostrap - Fake APİ {JSON-SERVER})
+## Used Technologies (React - Redux - Axios - Boostrap - Fake APİ {JSON-SERVER})
 
 In the project directory, you can run:
 
