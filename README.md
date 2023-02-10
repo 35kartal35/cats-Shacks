@@ -1,8 +1,8 @@
-# Getting Started with Create React App
+# PROJECT NAME: CATS-SHACKS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped .
 
-## Available Scripts
+## Used Technologies (React - Redux - Axios - Boostrap - Fake APİ {JSON-SERVER})
 
 In the project directory, you can run:
 
