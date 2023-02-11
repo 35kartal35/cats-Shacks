@@ -1,5 +1,5 @@
 .Header{
-    margin: 0;
+    margin-block: 50px;
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
@@ -24,6 +24,8 @@
     border-radius: 10px;
     font-weight: 100;
     margin: 20px;
+    
+
 }
 
 .navbar-nav{

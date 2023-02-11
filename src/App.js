@@ -13,6 +13,7 @@ function App() {
   const { catsState, shacksState} = useSelector((state) => state);
   
   useEffect(()=>{
+    /* fetch cats*/
     dispatch({type: ActionTypes.catsAction.GET_CAT_START});
     api.get(urls.Cats)
     .then((res)=>{
@@ -26,6 +27,7 @@ function App() {
         payload: "Serverda bir hata oluştu",
       });
     });
+    /*fetch shacks*/
     dispatch({type:ActionTypes.shacksAction.GET_SHACK_START});
     api.get(urls.Shacks)
     .then((res)=>{
@@ -40,7 +42,8 @@ function App() {
         payload:"Serverda bir hata oluştu"
       });
     });
-  }, []);
+  }, 
+  []);
 
   if (catsState.success === false || shacksState.success === false)
   return null;

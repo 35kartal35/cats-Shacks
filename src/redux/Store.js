@@ -5,7 +5,7 @@ import shacksReducer from "./Reducer/ShackReducer";
 
 const rootReducer=combineReducers({
     catsState:catsReducer,
-    shacksState:shacksReducer
+    shacksState:shacksReducer,
 
 })
 

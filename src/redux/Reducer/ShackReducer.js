@@ -20,7 +20,7 @@ const shacksReducer=(state=initialState,action)=>{
                     ...state,
                     pending:false,
                     success:true,
-                    shaks:action.payload,
+                    shacks:action.payload,
                     fail:false
                 }
                 case ActionTypes.shacksAction.GET_SHACK_FAİL:
