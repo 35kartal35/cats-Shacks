@@ -2,14 +2,31 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import "../assets/Listcats.css"
+import api from "../api/api"
+import urls from "../api/urls"
+import { useDispatch } from "react-redux";
+import ActionTypes from "../redux/Action/ActionTypes";
 
 const ListCats=()=>{
     
-    
+    const dispatch=useDispatch()
     const { catsState } = useSelector((state) => state);
     const {shacksState} = useSelector((state)=> state);
-    console.log("cats", catsState)
+    
     console.log("Shacks", shacksState)
+    const deletecats=(id)=>{
+      dispatch({type:ActionTypes.catsAction.DELETE_CAT_START})
+      api.delete(`${urls.Cats}/${id}`)
+      .then((res)=>{
+        dispatch({type:ActionTypes.catsAction.DELETE_CAT_SUCCESS,
+          payload:id});
+      })
+    
+      .catch((err)=>{
+        dispatch({type:ActionTypes.catsAction.DELETE_CAT_FAİL, 
+          payload:"Silme İşlemi esnasında bir hata oluştu.",});
+      });
+    };
     
     return(
         <div classname="my-5">
@@ -27,7 +44,7 @@ const ListCats=()=>{
   <tbody>
     {catsState.cats.map((cat, index)=>{
       const myShacks= shacksState.shacks.find(
-        (item)=>item.id === cat.shackId
+        (item)=>item.id === cat.id
       );
       return(
        
@@ -39,7 +56,7 @@ const ListCats=()=>{
         <td>{myShacks.name}</td>
         <td>
             <button className="btn btn-primary">Detay</button>
-            <button className="btn btn-secondary">Sil</button>
+            <button onClick= {deletecats(cat.id)} className="btn btn-secondary">Sil</button>
             <button classname="btn btn-danger">Düzenle</button>
             </td>
       </tr>
