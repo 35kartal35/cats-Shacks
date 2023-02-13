@@ -7,22 +7,24 @@ import urls from "../api/urls"
 import { useDispatch } from "react-redux";
 import ActionTypes from "../redux/Action/ActionTypes";
 
-const ListCats=()=>{
+const ListCats=()=> {
     
-    const dispatch=useDispatch()
+    const dispatch = useDispatch()
     const { catsState } = useSelector((state) => state);
     const {shacksState} = useSelector((state)=> state);
     
     console.log("Shacks", shacksState)
-    const deletecats=(id)=>{
-      dispatch({type:ActionTypes.catsAction.DELETE_CAT_START})
+    console.log("cats", catsState)
+
+    const deletecats = (id) =>{
+      dispatch({type:ActionTypes.catsAction.DELETE_CAT_START});
       api.delete(`${urls.Cats}/${id}`)
       .then((res)=>{
         dispatch({type:ActionTypes.catsAction.DELETE_CAT_SUCCESS,
-          payload:id});
+          payload:id})
       })
     
-      .catch((err)=>{
+      .catch(err=>{
         dispatch({type:ActionTypes.catsAction.DELETE_CAT_FAİL, 
           payload:"Silme İşlemi esnasında bir hata oluştu.",});
       });
@@ -56,7 +58,7 @@ const ListCats=()=>{
         <td>{myShacks.name}</td>
         <td>
             <button className="btn btn-primary">Detay</button>
-            <button onClick= {deletecats(cat.id)} className="btn btn-secondary">Sil</button>
+            <button onClick= {()=>deletecats(cat.id)} className="btn btn-secondary">Sil</button>
             <button classname="btn btn-danger">Düzenle</button>
             </td>
       </tr>

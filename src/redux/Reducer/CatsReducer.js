@@ -37,7 +37,30 @@ const catsReducer=(state=initialState,action)=>{
                     ...state,
                     cats:[...state.cats,action.payload]
                 }
-                default: return state
+            case ActionTypes.catsAction.DELETE_CAT_START:
+                return{
+                    ...state,
+                    pending:true
+                }
+            case ActionTypes.catsAction.DELETE_CAT_SUCCESS:
+               let filteredcats=state.cats.filter(item => item.id !== action.payload)
+               return{
+                ...state,
+                pending:false,
+                success:true,
+                fail:false,
+                Cats:filteredcats
+            } 
+            case ActionTypes.catsAction.DELETE_CAT_FAİL:
+                return {
+                    ...state,
+                    pending:false,
+                    success:false,
+                    fail:true,
+                    error:action.payload
+                }
+
+               default: return state
     }
 }
 
