@@ -1,5 +1,6 @@
 import React from "react";
 import "../assets/App.css"
+import { Link } from "react-router-dom";
 
 const Header = () => {
     return (
@@ -9,7 +10,7 @@ const Header = () => {
                     <h1 className="navbar-brand">KEDİLERİN YUVASI</h1>
                     <ul className="navbar-nav">
                             <li className="nav-item">
-                                <p className="nav-link active" aria-current="page" href="#">Anasayfa</p>
+                                <Link to={"/"}>Anasayfa</Link>
                             </li>
                             <li className="nav-item">
                                 <p className="nav-link" href="#">Kedi Ekle</p>

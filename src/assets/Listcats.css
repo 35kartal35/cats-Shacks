@@ -1,8 +1,26 @@
-.table{
+.liste{
     margin: 10px;
+    padding: 20px;
+    border: 1px solid;
+    
+    justify-content: center;
+    padding-right: 50px;
+    margin-left: 20px;
+    background-color: rgb(172, 215, 235);
+
+}
+
+.baslık{
+    margin: 20px;
     padding: 10px;
+    border: 1px solid;
+    background-color: rgb(172, 215, 235);
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: columns;
+    
 }
+
+.bas{
+    gap: 10px;
+}
+

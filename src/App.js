@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-
+import Detail from "./Page/Detail";
 import HomePage from "./Page/HomePage";
 
 import { BrowserRouter,Routes,Route } from "react-router-dom";
@@ -52,6 +52,7 @@ function App() {
     <BrowserRouter>
     <Routes>
       <Route path="/" element={<HomePage />}/>
+      <Route path="/cat-detay/:catId" element={<Detail/>}/>
     </Routes>
     </BrowserRouter>
   );

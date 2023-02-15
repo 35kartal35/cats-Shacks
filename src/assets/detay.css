@@ -1,0 +1,12 @@
+.detay{
+    margin: 40px;
+    margin-bottom: 20px;
+    padding: 30px;
+    border: 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(192, 213, 240);
+    border-radius: 15px;
+}

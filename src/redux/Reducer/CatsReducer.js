@@ -43,13 +43,13 @@ const catsReducer=(state=initialState,action)=>{
                     pending:true
                 }
             case ActionTypes.catsAction.DELETE_CAT_SUCCESS:
-               let filteredcats=state.cats.filter(item => item.id !== action.payload)
+               let filteredCats=state.cats.filter(item => item.id !== action.payload)
                return{
                 ...state,
                 pending:false,
                 success:true,
                 fail:false,
-                Cats:filteredcats
+                Cats:filteredCats
             } 
             case ActionTypes.catsAction.DELETE_CAT_FAİL:
                 return {

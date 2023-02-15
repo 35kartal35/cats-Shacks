@@ -1,10 +1,24 @@
 {
   "Cats": [
     {
-      "id": "2",
+      "id": "1",
       "name": "Peter",
       "age": "2",
       "color": "brown",
+      "shackId": "2"
+    },
+    {
+      "id": "3",
+      "name": "Peter",
+      "age": "2",
+      "color": "brown",
+      "shackId": "2"
+    },
+    {
+      "id": "2",
+      "name": "Tekir",
+      "age": "1",
+      "color": "Black",
       "shackId": "2"
     },
     {
@@ -20,7 +34,15 @@
       "age": "2",
       "color": "brown",
       "shackId": "2"
+    },
+    {
+      "id": "2",
+      "name": "Tekir",
+      "age": "1",
+      "color": "Black",
+      "shackId": "2"
     }
+
   ],
   "Shacks": [
     {
