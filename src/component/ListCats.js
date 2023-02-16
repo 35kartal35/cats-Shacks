@@ -35,7 +35,7 @@ const ListCats=()=> {
     };
     
     return(
-        <div classname="liste">
+        <div classname="container my-5">
              <table classname="liste">
   <thead className="baslık">
     <tr>

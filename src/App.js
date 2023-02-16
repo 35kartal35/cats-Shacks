@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Detail from "./Page/Detail";
 import HomePage from "./Page/HomePage";
-
+import AddCats from "./Page/AddCats";
 import { BrowserRouter,Routes,Route } from "react-router-dom";
 import { useDispatch,useSelector } from "react-redux";
 import api from "./api/api"
@@ -53,6 +53,7 @@ function App() {
     <Routes>
       <Route path="/" element={<HomePage />}/>
       <Route path="/cat-detay/:catId" element={<Detail/>}/>
+      <Route path="/addcats" element={<AddCats/>}/>
     </Routes>
     </BrowserRouter>
   );
