@@ -20,7 +20,7 @@ const AddCats = () => {
     });
 
     const handleSubmit = (event) => {
-        event.preventdefault();
+        event.preventDefault();
         console.log(myNewCat);
         /*validation*/
         if (myNewCat.name === "" || myNewCat.age === "" || myNewCat.color === "" || myNewCat.shackId === "") {
@@ -39,7 +39,7 @@ const AddCats = () => {
             navigate("/")
         })
         .catch((err)=>{});
-    }
+    };
 
     return (
         <div>
@@ -63,7 +63,7 @@ const AddCats = () => {
                     className="form-label">
                     Kedimizin Yaşı</label>
                 <input 
-                    type="text"
+                    type="number"
                     className="form-control"
                     id="age"
                     placeholder="Yaşı: 3"
@@ -83,7 +83,7 @@ const AddCats = () => {
                     className="form-label">
                     Kedimizin Kulübesi</label>
                 <input 
-                    type="text"
+                    type="number"
                     className="form-control"
                     id="shackId"
                     placeholder="Kulübesi : 2"
