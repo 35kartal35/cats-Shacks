@@ -24,8 +24,9 @@ const ListCats = () => {
         dispatch({
           type: ActionTypes.catsAction.DELETE_CAT_SUCCESS,
           payload: id,
-        });
-      })
+          });
+      },
+      window.location.reload())
 
       .catch(err => {
         dispatch({
