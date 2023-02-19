@@ -11,10 +11,10 @@ const Header = () => {
                     <h1 className="navbar-brand">KEDİLERİN YUVASI</h1>
                     <ul className="navbar-nav">
                             <li className="nav-item">
-                                <Link to={"/"}>Anasayfa</Link>
+                                <Link className="btn btn-primary" to={"/"}>Anasayfa</Link>
                             </li>
                             <li className="nav-item">
-                                <Link to={"/addcats"}>Kedi Ekle</Link>
+                                <Link className="btn btn-primary" to={"/addcats"}>Kedi Ekle</Link>
                             </li>
                             
 

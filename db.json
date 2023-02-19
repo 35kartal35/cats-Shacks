@@ -1,38 +1,24 @@
 {
   "Cats": [
     {
-      "id": "3",
-      "name": "Peter",
-      "age": "2",
-      "color": "brown",
-      "shackId": "2"
-    },
-    {
       "id": "1",
       "name": "TOM",
       "age": "2",
       "color": "White",
-      "shackId": "2"
+      "shackId": "3"
     },
     {
       "id": "3",
-      "name": "Peter",
-      "age": "2",
-      "color": "brown",
-      "shackId": "2"
+      "name": "Peter PEN ",
+      "age": "10",
+      "color": "brown - Yellow",
+      "shackId": "3"
     },
     {
       "id": "2",
-      "name": "Tekir",
+      "name": "Tekir ",
       "age": "1",
-      "color": "Black",
-      "shackId": "2"
-    },
-    {
-      "id": "1676579109276",
-      "name": "Ömer Said ÖZDEMİR",
-      "age": "2",
-      "color": "blue",
+      "color": "Brown",
       "shackId": "2"
     },
     {
@@ -43,10 +29,10 @@
       "shackId": "1"
     },
     {
-      "id": "1676728350562",
-      "name": "Sueda özdemir",
+      "id": "1676811265770",
+      "name": "KARDO",
       "age": "1",
-      "color": "white",
+      "color": "ORANGE",
       "shackId": "1"
     }
   ],

@@ -6,7 +6,8 @@ const ActionTypes={
         DELETE_CAT_START:"DELETE_CAT_START",
         DELETE_CAT_SUCCESS:"DELETE_CAT_SUCCESS",
         DELETE_CAT_FAİL:"DELETE_CAT_FAİL",
-        ADD_CAT:"ADD_CAT"
+        ADD_CAT:"ADD_CAT",
+        EDIT_CAT:"EDIT_CAT"
     },
     shacksAction:{
 

@@ -1,0 +1,8 @@
+Yapılacaklar 
+1-)db.json un içindeki diziler yazılacak
+2-)api ve url yazılacak
+3-)reducer, action ve store yazılacak
+4-)Page olarak 'home page' ve componant olarak da 'header' yazılacak
+5-)Telefon numarası eklenecek
+6-)Telefon numarası silinecek
+

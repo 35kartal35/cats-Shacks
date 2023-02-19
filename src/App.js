@@ -7,6 +7,7 @@ import { useDispatch,useSelector } from "react-redux";
 import api from "./api/api"
 import urls from "./api/urls"
 import ActionTypes from "./redux/Action/ActionTypes";
+import Edit from "./Page/Edit";
 
 function App() {
   const dispatch = useDispatch();
@@ -54,6 +55,7 @@ function App() {
       <Route path="/" element={<HomePage />}/>
       <Route path="/cat-detay/:catId" element={<Detail/>}/>
       <Route path="/addcats" element={<AddCats/>}/>
+      <Route path="/cat-edit/:catId" element={<Edit/>}/>
     </Routes>
     </BrowserRouter>
   );

@@ -44,20 +44,22 @@ const ListCats = () => {
           {catsState.cats.map((cat, index) => {
             
             return (
+              <div className="container my-5">
               <div className="liste" >
                 <tr key={cat.id}>
-                  <th scope="row">{index + 1}</th>
-                  <td>{cat.name}</td>
-                  <td>{cat.age}</td>
-                  <td>{cat.color}</td>
+                  <th scope="row"><h1>{index + 1}</h1></th>
+                  <td><h2>{cat.name}</h2></td>
+                  <td><h2>{cat.age}</h2></td>
+                  <td><h2>{cat.color}</h2></td>
                   
                   <td>
-                    <Link to={`/cat-detay/${cat.id}`}>Detay</Link>
+                    <Link className="btn btn-primary" to={`/cat-detay/${cat.id}`}>Detay</Link>
                     <button onClick={() =>    deletecats(cat.id)} 
-                    className="btn btn-secondary">Sil</button>
-                    <button classname="btn btn-success">Düzenle</button>
+                    className="btn btn-danger">Sil</button>
+                   <Link className="btn btn-success" to={`/cat-edit/${cat.id}`}>Düzenle</Link>
                   </td>
                 </tr>
+              </div>
               </div>
 
             )
