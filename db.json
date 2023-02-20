@@ -3,16 +3,9 @@
     {
       "id": "1",
       "name": "pekmez",
-      "age": "2",
+      "age": "9",
       "color": "brown",
       "shackId": "1"
-    },
-    {
-      "id": "2",
-      "name": "Tekir ",
-      "age": "1",
-      "color": "Brown",
-      "shackId": "2"
     },
     {
       "id": "1676720996688",
@@ -36,11 +29,32 @@
       "shackId": "1"
     },
     {
-      "id": "1676815492631",
-      "name": "Peter PEN",
-      "age": "3",
-      "color": "black",
-      "shackId": "2"
+      "id": "1676816061062",
+      "name": "Jaguar",
+      "age": "12",
+      "color": "Dark-Gray",
+      "shackId": "3"
+    },
+    {
+      "id": "1676816172294",
+      "name": "Mehmet özdemir",
+      "age": "32",
+      "color": "Black",
+      "shackId": "3"
+    },
+    {
+      "id": "1676816447479",
+      "name": "Sueda özdemir",
+      "age": "12",
+      "color": "Yellow",
+      "shackId": "3"
+    },
+    {
+      "id": "1676913178733",
+      "name": "ddd",
+      "age": "2",
+      "color": "1",
+      "shackId": "3"
     }
   ],
   "Shacks": [

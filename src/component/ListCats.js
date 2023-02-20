@@ -14,6 +14,7 @@ const ListCats = () => {
 
   const dispatch = useDispatch()
   const { catsState } = useSelector((state) => state);
+  const {shacksState} = useSelector((state)=>state)
   const [searchCat, setSearchCat] = useState("");
   const [filteredTekir, setFilteredTekir] = useState(catsState.cats)
   useEffect(() => {
@@ -61,15 +62,18 @@ const ListCats = () => {
         <tbody>
         
           {filteredTekir.map((cat, index) => {
+            const mycats = shacksState.shacks.find(
+              (item) => item.id === cat.shackId
+            )
 
             return (
-              <div className="container my-5">
+              <div className="header">
                 <div className="liste" >
                   <tr key={cat.id}>
-                    <th scope="row"><h1>{index + 1}</h1></th>
-                    <td><h2>{cat.name}</h2></td>
-                    <td><h2>{cat.age}</h2></td>
-                    <td><h2>{cat.color}</h2></td>
+                    <th scope="row"><h1>{index + 1}-)</h1></th>                    <td><h1>{cat.name}</h1></td>
+                    <td><h2>{cat.age}-</h2></td>
+                    <td><h3>({cat.color})-</h3></td>
+                    <td><h4>({mycats.name})</h4></td>
 
                     <td>
                       <Link className="btn btn-primary" to={`/cat-detay/${cat.id}`}>Detay</Link>

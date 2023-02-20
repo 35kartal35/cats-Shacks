@@ -8,6 +8,7 @@ import api from "./api/api"
 import urls from "./api/urls"
 import ActionTypes from "./redux/Action/ActionTypes";
 import Edit from "./Page/Edit";
+import ListShacks from "./Page/ListShacks";
 
 function App() {
   const dispatch = useDispatch();
@@ -56,6 +57,7 @@ function App() {
       <Route path="/cat-detay/:catId" element={<Detail/>}/>
       <Route path="/addcats" element={<AddCats/>}/>
       <Route path="/cat-edit/:catId" element={<Edit/>}/>
+      <Route path="/listShacks" element={<ListShacks/>}/>
     </Routes>
     </BrowserRouter>
   );

@@ -16,7 +16,9 @@ const Header = () => {
                             <li className="nav-item">
                                 <Link className="btn btn-primary" to={"/addcats"}>Kedi Ekle</Link>
                             </li>
-                            
+                            <li className="nav-item">
+                                <Link className="btn btn-primary" to={"/listShacks"}>Kulübeler</Link>
+                            </li>
 
 
                         </ul>
