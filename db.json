@@ -55,6 +55,13 @@
       "age": "2",
       "color": "1",
       "shackId": "3"
+    },
+    {
+      "id": "1676917919292",
+      "name": "LEO",
+      "age": "2",
+      "color": "Gray",
+      "shackId": "2"
     }
   ],
   "Shacks": [

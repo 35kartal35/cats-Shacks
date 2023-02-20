@@ -60,7 +60,7 @@ const catsReducer=(state=initialState,action)=>{
                     error:action.payload
                 }
             case ActionTypes.catsAction.EDIT_CAT:
-                console.log()
+               
                 let temp=[]
                 for(let i=0;i<state.cats.length;i++){
                     if(state.cats[i].id !== action.payload.id){

@@ -10,17 +10,25 @@ import "../assets/detay.css"
 const Detail=()=>{
     const params = useParams();
     const [myCat, setMyCat] = useState(null);
+    const [catShack,setCatShack] = useState(null)
+    
+
     
     useEffect(()=>{
         api.get(`${urls.Cats}/${params.catId}`)
-        .then((res) => {
-            console.log(res.data);
-            setMyCat(res.data);
+        .then((rescat) => {
+            console.log(rescat.data);
+            setMyCat(rescat.data);
+            api.get(`${urls.Shacks}/${rescat.data.shackId}`)
+            .then((resShack)=>{
+                console.log(resShack.data);
+                setCatShack(resShack.data);
+            })
              })
              .catch((err)=>{});
     }, []);
 
-    if(myCat === null) return null;
+    if(myCat === null || catShack === null) return null;
    
     return(
         <div>
@@ -29,6 +37,7 @@ const Detail=()=>{
             <h1>KEDİMİN ADI: {myCat.name}</h1>
             <h3>KEDİMİN YAŞI: {myCat.age}</h3>
             <h2>KEDİMİN RENGİ: {myCat.color}</h2>
+            <h2>KEDİMİN Kulübesi: {catShack.name}</h2>
             <img src={icon}/>
             <Link to={"/"}>Geri</Link>
             </div>

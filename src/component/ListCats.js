@@ -70,10 +70,11 @@ const ListCats = () => {
               <div className="header">
                 <div className="liste" >
                   <tr key={cat.id}>
-                    <th scope="row"><h1>{index + 1}-)</h1></th>                    <td><h1>{cat.name}</h1></td>
-                    <td><h2>{cat.age}-</h2></td>
-                    <td><h3>({cat.color})-</h3></td>
-                    <td><h4>({mycats.name})</h4></td>
+                    <th scope="row"><h1>{index + 1}-)</h1></th>                    
+                    <td><h1>Adı:{cat.name}-</h1></td>
+                    <td><h2>Yaşı:{cat.age}-</h2></td>
+                    <td><h3>Rengi:({cat.color})-</h3></td>
+                    <td><h1>Kulübesi:({mycats.name})</h1></td>
 
                     <td>
                       <Link className="btn btn-primary" to={`/cat-detay/${cat.id}`}>Detay</Link>
