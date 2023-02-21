@@ -3,9 +3,9 @@
     {
       "id": "1",
       "name": "pekmez",
-      "age": "9",
+      "age": "8",
       "color": "brown",
-      "shackId": "1"
+      "shackId": "2"
     },
     {
       "id": "1676720996688",
@@ -62,6 +62,13 @@
       "age": "2",
       "color": "Gray",
       "shackId": "2"
+    },
+    {
+      "id": "1677000317968",
+      "name": "pense",
+      "age": "2550",
+      "color": "sarı",
+      "shackId": "1"
     }
   ],
   "Shacks": [
@@ -76,6 +83,30 @@
     {
       "id": "3",
       "name": "WhiteHause"
+    },
+    {
+      "id": "1677004279652",
+      "name": "Green Hause"
+    },
+    {
+      "id": "1677004357501",
+      "name": "Yellow hause"
+    },
+    {
+      "id": "1677005122933",
+      "name": "yeşil kulübe"
+    },
+    {
+      "id": "1677005135641",
+      "name": "add"
+    },
+    {
+      "id": "1677005311436",
+      "name": "fffff"
+    },
+    {
+      "id": "1677005454458",
+      "name": "sarı Kulübe"
     }
   ]
 }

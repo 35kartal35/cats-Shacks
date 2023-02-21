@@ -32,6 +32,12 @@ const shacksReducer=(state=initialState,action)=>{
                         error:action.payload
 
                     }
+                case ActionTypes.shacksAction.ADD_SHACK:
+                    return{
+                        ...state,
+                        shacks:[...state.shacks,action.payload]
+    
+                    }
 
                     default: return state
     }

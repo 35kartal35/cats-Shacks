@@ -12,7 +12,7 @@ const ListShacks=()=>{
             <Header/>
             <div className="container my-5">
             <table className="table">
-          <thead>
+          <thead className="container my-5">
             <tr>
               <th scope="col">Sıra No</th>
               <th scope="col">Kulübe Adı</th>

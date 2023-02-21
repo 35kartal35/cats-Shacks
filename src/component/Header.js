@@ -1,7 +1,7 @@
 import React from "react";
 import "../assets/App.css"
 import { Link } from "react-router-dom";
-import pink from "../assets/shack1.png"
+
 
 const Header = () => {
     return (
@@ -19,6 +19,9 @@ const Header = () => {
                             </li>
                             <li className="nav-item">
                                 <Link className="btn btn-primary" to={"/listShacks"}>Kulübeler</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="btn btn-primary" to={"/addShacks"}>Kulübe Ekle</Link>
                             </li>
 
 
