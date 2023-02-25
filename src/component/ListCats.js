@@ -7,6 +7,7 @@ import urls from "../api/urls"
 import { useDispatch } from "react-redux";
 import ActionTypes from "../redux/Action/ActionTypes";
 
+
 import { Link } from "react-router-dom";
 
 
@@ -79,7 +80,7 @@ const ListCats = () => {
                     <td>
                       <Link className="btn btn-primary" to={`/cat-detay/${cat.id}`}>Detay</Link>
                       <button onClick={() => deletecats(cat.id)}
-                        className="btn btn-danger">Sil</button>
+                        className="btn btn-danger">sil</button>
                       <Link className="btn btn-success" to={`/cat-edit/${cat.id}`}>Düzenle</Link>
                     </td>
                   </tr>

@@ -13,7 +13,8 @@ const ActionTypes={
 
         GET_SHACK_START:"GET_SHACK_START",
         GET_SHACK_SUCCESS:"GET_SHACK_SUCCESS",
-        GET_SHACK_FAİL:"GET_SHACK_FAİL"
+        GET_SHACK_FAİL:"GET_SHACK_FAİL",
+        ADD_SHACK:"ADD_SHACK"
 
     }
 
