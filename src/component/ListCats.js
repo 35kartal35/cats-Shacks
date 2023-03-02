@@ -6,7 +6,7 @@ import api from "../api/api"
 import urls from "../api/urls"
 import { useDispatch } from "react-redux";
 import ActionTypes from "../redux/Action/ActionTypes";
-
+import customModal from "./customModal";
 
 import { Link } from "react-router-dom";
 
@@ -15,9 +15,11 @@ const ListCats = () => {
 
   const dispatch = useDispatch()
   const { catsState } = useSelector((state) => state);
-  const {shacksState} = useSelector((state)=>state)
+  const {shacksState} = useSelector((state)=>state);
   const [searchCat, setSearchCat] = useState("");
-  const [filteredTekir, setFilteredTekir] = useState(catsState.cats)
+  const [filteredTekir, setFilteredTekir] = useState(catsState.cats);
+  const [showCustomModal, setShowCustomModal] = useState(false);
+  const [willDeleteCat, setWillDeleteCat] = useState("");
   useEffect(() => {
     console.log(searchCat)
     const temp = catsState.cats.filter(
@@ -30,6 +32,7 @@ const ListCats = () => {
 
 
   const deletecats = (id) => {
+    
     dispatch({ type: ActionTypes.catsAction.DELETE_CAT_START });
     api.delete(`${urls.Cats}/${id}`)
       .then((res) => {
@@ -71,7 +74,7 @@ const ListCats = () => {
               <div className="header">
                 <div className="liste" >
                   <tr key={cat.id}>
-                    <th scope="row"><h1>{index + 1}-)</h1></th>                    
+                    <th scope="row"><h1>{index + 1}</h1></th>                    
                     <td><h1>Adı:{cat.name}-</h1></td>
                     <td><h2>Yaşı:{cat.age}-</h2></td>
                     <td><h3>Rengi:({cat.color})-</h3></td>
@@ -79,7 +82,9 @@ const ListCats = () => {
 
                     <td>
                       <Link className="btn btn-primary" to={`/cat-detay/${cat.id}`}>Detay</Link>
-                      <button onClick={() => deletecats(cat.id)}
+                      <button onClick={() => {
+                      setShowCustomModal(true);
+                      setWillDeleteCat(cat.id);}}
                         className="btn btn-danger">sil</button>
                       <Link className="btn btn-success" to={`/cat-edit/${cat.id}`}>Düzenle</Link>
                     </td>
@@ -94,7 +99,17 @@ const ListCats = () => {
 
         </tbody>
       </table>
-
+          {showCustomModal === true && (
+            <customModal
+            title="silme"
+            mesage="Silmek istediğinizden Emin misiniz"
+            onCancel={()=>setShowCustomModal(false)}
+            onConfirm={()=> {
+              deletecats(willDeleteCat);
+              setShowCustomModal(false);
+            }}
+            />
+          )}
 
     </div>
   )

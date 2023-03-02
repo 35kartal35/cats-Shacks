@@ -11,6 +11,7 @@ import Edit from "./Page/Edit";
 import ListShacks from "./Page/ListShacks";
 import AddShacks from "./Page/AddShaks";
 
+
 function App() {
   const dispatch = useDispatch();
   const { catsState, shacksState} = useSelector((state) => state);

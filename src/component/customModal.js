@@ -35,4 +35,4 @@ const customModal = ({title="Hata",message="",onCancel=()=>{},onConfirm=()=>{}})
   );
 };
 
-export default customModal;
+export default customModal
