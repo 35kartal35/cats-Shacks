@@ -1,4 +1,4 @@
-# PROJECT NAME: CATS-SHACKS
+# PROJECT NAME: (CATS)-(SHACKS)
 
 This project was bootstrapped .
 
